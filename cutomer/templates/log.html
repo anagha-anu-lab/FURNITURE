@@ -1,0 +1,18 @@
+{% extends 'index.html'%}
+ {% block base %}
+
+  <h2 class="head">The Furniture Shoppe</h2>
+      
+      <form action="" method="post">
+        {%csrf_token%}
+        <table class="table">
+          {{form.as_table}}
+        </table>
+        <div>
+          <button class="btn btn-success">Login</button>
+        </div>
+      </form>
+      <a style="margin-left: 170px;" href="{% url 'reg' %}">Register</a>
+{% endblock base %}
+      
+    

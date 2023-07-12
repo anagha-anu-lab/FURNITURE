@@ -1,0 +1,18 @@
+{% extends 'index1.html'%}
+{% block base %}
+      <form action="" method="post">
+        {%csrf_token%}
+        <table class="table">
+           {{form.as_table}}
+        </table>
+        <div class="text-center">
+            <button class="btn btn-success">Submit</button>
+        </div>
+        <!-- <div class="social"> -->
+          <div class="go">Already Registerd?><a href="{% url 'log' %}">Login Now</a></div>
+
+        <!-- </div>
+         -->
+      </form>
+{%endblock base %}
+   
